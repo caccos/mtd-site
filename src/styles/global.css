@@ -183,7 +183,7 @@ input {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
 }
 
-#temas,
+#trabalhos,
 #servicos {
   scroll-margin-top: calc(var(--header) + 0.6rem);
 }
@@ -487,6 +487,10 @@ input {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.sites-follow {
+  margin-top: clamp(3.2rem, 6vw, 5rem);
+}
+
 .theme {
   overflow: hidden;
   display: flex;
@@ -494,8 +498,25 @@ input {
   background: var(--white);
 }
 
+a.theme {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-open {
+  margin-top: 0.95rem;
+  font-size: 0.92rem;
+  font-weight: 560;
+  color: var(--rust-deep);
+}
+
+a.theme:hover .work-open {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
 .theme-media {
-  position: relative;
   aspect-ratio: 16 / 10;
   background: var(--ink);
 }
@@ -505,21 +526,6 @@ input {
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.theme-status {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  margin: 0;
-  background: rgba(20, 24, 31, 0.86);
-  color: var(--paper);
-  border-radius: 999px;
-  padding: 0.28rem 0.65rem;
-  font-size: 0.72rem;
-  font-weight: 560;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .theme-body {

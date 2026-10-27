@@ -4,7 +4,7 @@ Site estático da empresa. Astro gera HTML, CSS e imagens em `dist/`. A visita p
 
 ## Rodar na máquina
 
-É preciso Node.js 20.18 ou mais recente. Nesta máquina de desenvolvimento o binário ficou em `~/.local` (v22), e `~/.profile` já inclui `~/.local/bin` nos shells de login. Se `node` não aparecer:
+É preciso Node.js 22.23.4 ou mais recente, o mínimo do Astro 7.4.2. Nesta máquina de desenvolvimento o binário ficou em `~/.local` (22.23.4), e `~/.profile` já inclui `~/.local/bin` nos shells de login. Se `node` não aparecer:
 
 ```bash
 export PATH="$HOME/.local/bin:$PATH"
@@ -33,7 +33,7 @@ npm run preview
 
 - Não é uma skin nem um `SITE_KEY` do `mtd-site-starter`.
 - Não chama `https://dir.nodenode.net` em runtime.
-- Não publica as demos `tpl-*.apps.mtd.net.br`. Os cartões do catálogo ficam em prévia.
+- Não publica as demos `tpl-*.apps.mtd.net.br`. Os seis sites de segmento não têm link de demonstração. BASE Participações, RockTech e HVAC Engenharia apontam para os sites já no ar.
 - Não tem formulário com backend. O contato é o WhatsApp, em outra aba, e o e-mail.
 
 ## Repositório no GitHub

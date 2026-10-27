@@ -1,0 +1,83 @@
+---
+import { catalogThemes } from "../data/catalog";
+import { publishedSites } from "../data/work";
+---
+
+<section class="band" id="trabalhos" aria-labelledby="trabalhos-titulo">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Trabalhos</p>
+      <h2 id="trabalhos-titulo">Sites no ar</h2>
+      <p class="section-lede">
+        Três empresas com o site publicado no endereço delas. Cada projeto foi
+        desenhado para o negócio, com o conteúdo e a estrutura daquela operação.
+      </p>
+    </header>
+    <div class="catalog-grid">
+      {
+        publishedSites.map((item) => (
+          <a
+            class="theme"
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={`--accent:${item.accent}`}
+          >
+            <div class="theme-media">
+              <img
+                src={item.thumb}
+                width="1440"
+                height="900"
+                alt={`Site de ${item.brand}`}
+              />
+            </div>
+            <div class="theme-body">
+              <p class="theme-brand">{item.brand}</p>
+              <h3>{item.title}</h3>
+              <p>{item.excerpt}</p>
+              <p class="work-open">
+                Ver o site
+                <span class="sr-only"> (abre em outra aba)</span>
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <header class="section-head sites-follow">
+      <h2>Sites para outros segmentos</h2>
+      <p class="section-lede">
+        Holding, engenharia, barbearia, confeitaria, contabilidade e clínica.
+        Cada cartão é o site fechado daquele segmento. O projeto de quem contrata
+        segue com o estúdio, da estrutura à publicação.
+      </p>
+    </header>
+    <div class="catalog-grid">
+      {
+        catalogThemes.map((theme) => (
+          <article class="theme" style={`--accent:${theme.accent}`}>
+            <div class="theme-media">
+              <img
+                src={theme.thumb}
+                width="1440"
+                height="900"
+                alt={`Site de ${theme.brand}`}
+              />
+            </div>
+            <div class="theme-body">
+              <p class="theme-brand">{theme.brand}</p>
+              <h3>{theme.title}</h3>
+              <p>{theme.excerpt}</p>
+              <ul class="modules" aria-label="O que este site tem">
+                {theme.modules.map((module) => (
+                  <li>{module}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

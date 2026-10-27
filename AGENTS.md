@@ -25,6 +25,6 @@ Não editar `~/dev/docs` só porque este site existe. Uma linha na infra só qua
 
 - Build estático. Sem `@astrojs/node`, sem `@astrojs/vercel` em modo servidor, sem rota de API.
 - Textos e a vitrine entram no build (`src/data/`). A visita não consulta o Directus.
-- Catálogo: cartão em prévia. Sem link para `tpl-*.apps.mtd.net.br` até existir endereço público.
+- Catálogo: a vitrine mostra sites entregues. Os três clientes no ar têm link próprio. Os seis de segmento só ganham link quando houver endereço público na VPS `37.27.94.160`. O homelab é desenvolvimento. Não apontar para `tpl-*.apps.mtd.net.br`. O texto não convida o visitante a montar o site sozinho.
 - Contato: WhatsApp em outra aba. Sem formulário com backend nesta versão.
 - Não fazer deploy na Vercel nem criar o remoto GitHub sem pedido explícito.

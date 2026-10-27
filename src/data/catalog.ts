@@ -1,5 +1,5 @@
 /**
- * Vitrine estática. Textos copiados do catálogo do laboratório de templates.
+ * Sites fechados por segmento, mostrados como trabalho entregue.
  * Sem href: as demos internas não entram neste site até existir endereço público.
  */
 export type CatalogTheme = {
@@ -17,16 +17,16 @@ export const catalogThemes: CatalogTheme[] = [
     id: "institucional",
     brand: "Leme Participações",
     title: "Holding sóbria",
-    excerpt: "Escritório, atuação e equipe. Sem portfólio, sem carta, sem blog.",
+    excerpt: "Site da holding: escritório, atuação e equipe.",
     modules: ["páginas"],
     accent: "#1b4f8b",
     thumb: "/catalog/institucional.webp",
   },
   {
     id: "engenharia",
-    brand: "Exemplo Engenharia",
+    brand: "Esquadro Engenharia",
     title: "Portfólio com galeria e vídeo",
-    excerpt: "Obras publicadas no CMS: capa, galeria e no máximo um vídeo por projeto.",
+    excerpt: "Portfólio de obras, com capa, galeria e um vídeo por projeto.",
     modules: ["portfólio"],
     accent: "#e2820f",
     thumb: "/catalog/engenharia.webp",
@@ -35,7 +35,7 @@ export const catalogThemes: CatalogTheme[] = [
     id: "barbearia",
     brand: "Navalha Studio",
     title: "Carta de serviços",
-    excerpt: "Corte, barba e combo com preço na ficha. Horário fecha no WhatsApp.",
+    excerpt: "Carta de corte, barba e combo, com preço. O horário segue no WhatsApp.",
     modules: ["carta", "WhatsApp"],
     accent: "#b8872f",
     thumb: "/catalog/barbearia.webp",
@@ -44,7 +44,7 @@ export const catalogThemes: CatalogTheme[] = [
     id: "confeitaria",
     brand: "Confeitaria Hortênsia",
     title: "Vitrine com orçamento",
-    excerpt: "Piso de preço no cartão. O clique leva o nome do item no WhatsApp.",
+    excerpt: "Vitrine com piso de preço. O pedido sai com o nome do item no WhatsApp.",
     modules: ["vitrine", "WhatsApp"],
     accent: "#b54a5a",
     thumb: "/catalog/confeitaria.webp",
@@ -53,7 +53,7 @@ export const catalogThemes: CatalogTheme[] = [
     id: "contabilidade",
     brand: "Prumo Contadores",
     title: "Blog para o sócio",
-    excerpt: "Obrigação, folha e regime. A conversa seguinte é no formulário.",
+    excerpt: "Artigos sobre obrigação, folha e regime, para a conversa com o sócio.",
     modules: ["blog"],
     accent: "#2a5a3d",
     thumb: "/catalog/contabilidade.webp",
@@ -63,7 +63,7 @@ export const catalogThemes: CatalogTheme[] = [
     brand: "Casa Nacre",
     title: "Carta e artigos da casa",
     excerpt:
-      "Tratamentos com preço e duração, mais três artigos de rotina. WhatsApp agenda.",
+      "Tratamentos com preço e duração, artigos da casa e agenda no WhatsApp.",
     modules: ["carta", "blog", "WhatsApp"],
     accent: "#8a3d58",
     thumb: "/catalog/clinica-estetica.webp",
