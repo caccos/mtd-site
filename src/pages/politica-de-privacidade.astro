@@ -19,7 +19,9 @@ import { site } from "../data/site";
       <h2>Quem somos</h2>
       <p>
         A Mind The Digital, CNPJ {site.cnpj}, com sede em {site.city}, é a
-        controladora dos dados tratados neste site. O contato é
+        controladora dos dados tratados neste site. O endereço é
+        <a href={site.url}>{site.url}</a>. O acesso por mindthedigital.com.br
+        leva para esse endereço. O contato é
         <a href={`mailto:${site.email}`}>{site.email}</a> ou WhatsApp
         <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
           {site.phoneDisplay}<span class="sr-only"> (abre em outra aba)</span>
@@ -101,8 +103,8 @@ import { site } from "../data/site";
 
       <h2>Atualizações</h2>
       <p>
-        Esta política pode mudar quando o site ganhar domínio público, formulário ou
-        ferramentas de medição. A data no topo da página acompanha a versão vigente.
+        Esta política pode mudar quando o site ganhar formulário ou ferramentas de
+        medição. A data no topo da página acompanha a versão vigente.
       </p>
     </div>
   </article>

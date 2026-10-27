@@ -1,5 +1,6 @@
 export const site = {
   name: "Mind The Digital",
+  url: "https://www.mindthedigital.com.br",
   email: "contato@mindthedigital.com.br",
   phoneDisplay: "(11) 96860-0272",
   whatsapp: "https://wa.me/5511968600272",

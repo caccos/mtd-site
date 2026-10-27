@@ -38,38 +38,14 @@ npm run preview
 
 ## Repositório no GitHub
 
-Org já usada pelos outros repos: `mindthedigital`. Crie um repositório **vazio** (sem README, sem `.gitignore`, sem licença), de preferência privado enquanto o site não for público. Nome sugerido: `mtd-site`.
-
-No GitHub: **New repository** → owner `mindthedigital` → nome `mtd-site` → Private → não marque “Add a README”.
-
-Depois, nesta pasta:
-
-```bash
-cd ~/dev/sites/mtd-site
-git init
-git add .
-git commit -m "Abre o site institucional estático da Mind The Digital."
-git branch -M main
-git remote add origin git@github.com:mindthedigital/mtd-site.git
-git push -u origin main
-```
+Remoto atual: `git@github.com:caccos/mtd-site.git`. `main` é produção. Alterações seguem na branch `preview` e só entram no ar depois do merge.
 
 A chave SSH que os outros repos desta máquina usam é `~/.ssh/id_ed25519_github` (host `github.com` no `~/.ssh/config`). Não troque a chave do workspace. Não inclua `.env` — este projeto não precisa de segredo.
 
 ## Projeto na Vercel
 
-Ainda não há deploy. Quando for criar o projeto:
+Já existe, no time `mtd-projects`, importado de `caccos/mtd-site`. Produção: [https://www.mindthedigital.com.br](https://www.mindthedigital.com.br). A branch `preview` publica em [https://mtd-site-git-preview-mtd-projects.vercel.app](https://mtd-site-git-preview-mtd-projects.vercel.app). A Vercel Authentication está ligada nos endereços `*.vercel.app`. `https://mtd-site-mu.vercel.app` acompanha `main`, o mesmo deploy do domínio.
 
-1. [vercel.com/new](https://vercel.com/new) → **Import** do repositório `mindthedigital/mtd-site`.
-2. Framework Preset: **Astro**.
-3. Root Directory: `./`.
-4. Build Command: `npm run build`.
-5. Output Directory: `dist`.
-6. Install Command: `npm install`.
-7. Node.js: **22.x**.
-8. Sem variáveis de ambiente. Não crie `DIRECTUS_URL` nem instale adapter de servidor.
-9. Plano **Hobby** por enquanto. O upgrade para o Pro, quando o site for público, fica com você.
+Configuração que o painel já usa: Framework Astro, raiz `./`, build `npm run build`, saída `dist`, Node 24.x, sem variáveis de ambiente. Não crie `DIRECTUS_URL` nem instale adapter de servidor. O plano Hobby segue até o site ser público; o upgrade para o Pro fica com você.
 
 A Vercel executa o build e publica os arquivos de `dist/`. A hospedagem do site não precisa de Node em execução. O Directus de produção continua em `https://dir.nodenode.net`, na VPS.
-
-Pela CLI, o equivalente (só quando você pedir o deploy) é `npx vercel link` e depois `npx vercel`. O painel acima é o caminho mais claro para o primeiro projeto.
