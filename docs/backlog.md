@@ -12,7 +12,7 @@ Pendências deste site. O que já está no ar local está em [`STATUS.md`](STATU
 - [x] Atualizar Astro 5.18.2 para 7.4.2 *(2026-10-27)*.
 - [x] Conferir fontes, Node e npm. Fraunces e Outfit já estavam em 5.3.0. Node local 22.23.4 é o último da linha 22 e o mínimo do Astro *(2026-10-27)*.
 - [x] Publicar o índice dos templates em `https://templates.mindthedigital.com.br` *(2026-10-27)*.
-- [ ] Publicar cada segmento num endereço público próprio e só então ligar o cartão neste site. O índice ainda abre `tpl-*.apps.mtd.net.br`. Não usar esses hosts aqui.
+- [x] Ligar cada cartão de segmento ao endereço público (`leme`, `esquadro`, `navalha`, `hortensia`, `prumo`, `nacre`) *(2026-10-27)*.
 - [ ] Upgrade Vercel Hobby → Pro quando o site for público. Decisão e pagamento ficam com o operador.
 
 ## Depois

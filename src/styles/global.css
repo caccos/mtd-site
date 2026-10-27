@@ -331,6 +331,13 @@ input {
 
 .hero {
   padding: clamp(3.2rem, 7vw, 5.5rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+  background-color: #000;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center, right center;
 }
 
 .hero .eyebrow,
@@ -356,7 +363,7 @@ input {
   border: 1px solid rgba(244, 239, 232, 0.16);
   border-radius: 1.25rem;
   padding: 1.25rem 1.25rem 0.4rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .hero-panel-kicker {
@@ -812,6 +819,10 @@ a.theme:hover .work-open {
   .point-grid,
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    background-position: center, center;
   }
 
   h1 {

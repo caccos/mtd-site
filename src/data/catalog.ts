@@ -1,6 +1,6 @@
 /**
  * Sites fechados por segmento, mostrados como trabalho entregue.
- * Sem href: as demos internas não entram neste site até existir endereço público.
+ * O href é o endereço público de cada um. Não usar tpl-*.apps.mtd.net.br.
  */
 export type CatalogTheme = {
   id: string;
@@ -10,6 +10,7 @@ export type CatalogTheme = {
   modules: string[];
   accent: string;
   thumb: string;
+  href: string;
 };
 
 export const catalogThemes: CatalogTheme[] = [
@@ -21,6 +22,7 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["páginas"],
     accent: "#1b4f8b",
     thumb: "/catalog/institucional.webp",
+    href: "https://leme.mindthedigital.com.br",
   },
   {
     id: "engenharia",
@@ -30,6 +32,7 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["portfólio"],
     accent: "#e2820f",
     thumb: "/catalog/engenharia.webp",
+    href: "https://esquadro.mindthedigital.com.br",
   },
   {
     id: "barbearia",
@@ -39,6 +42,7 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["carta", "WhatsApp"],
     accent: "#b8872f",
     thumb: "/catalog/barbearia.webp",
+    href: "https://navalha.mindthedigital.com.br",
   },
   {
     id: "confeitaria",
@@ -48,6 +52,7 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["vitrine", "WhatsApp"],
     accent: "#b54a5a",
     thumb: "/catalog/confeitaria.webp",
+    href: "https://hortensia.mindthedigital.com.br",
   },
   {
     id: "contabilidade",
@@ -57,6 +62,7 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["blog"],
     accent: "#2a5a3d",
     thumb: "/catalog/contabilidade.webp",
+    href: "https://prumo.mindthedigital.com.br",
   },
   {
     id: "clinica-estetica",
@@ -67,5 +73,6 @@ export const catalogThemes: CatalogTheme[] = [
     modules: ["carta", "blog", "WhatsApp"],
     accent: "#8a3d58",
     thumb: "/catalog/clinica-estetica.webp",
+    href: "https://nacre.mindthedigital.com.br",
   },
 ];

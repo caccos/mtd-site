@@ -33,7 +33,7 @@ npm run preview
 
 - Não é uma skin nem um `SITE_KEY` do `mtd-site-starter`.
 - Não chama `https://dir.nodenode.net` em runtime.
-- Não publica as demos `tpl-*.apps.mtd.net.br`. Os seis sites de segmento não têm link de demonstração. BASE Participações, RockTech e HVAC Engenharia apontam para os sites já no ar.
+- Não publica as demos `tpl-*.apps.mtd.net.br`. Os seis sites de segmento apontam para o subdomínio público de cada marca. BASE Participações, RockTech e HVAC Engenharia apontam para os sites já no ar.
 - Não tem formulário com backend. O contato é o WhatsApp, em outra aba, e o e-mail.
 
 ## Repositório no GitHub

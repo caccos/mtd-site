@@ -56,7 +56,13 @@ import { publishedSites } from "../data/work";
     <div class="catalog-grid">
       {
         catalogThemes.map((theme) => (
-          <article class="theme" style={`--accent:${theme.accent}`}>
+          <a
+            class="theme"
+            href={theme.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={`--accent:${theme.accent}`}
+          >
             <div class="theme-media">
               <img
                 src={theme.thumb}
@@ -74,8 +80,12 @@ import { publishedSites } from "../data/work";
                   <li>{module}</li>
                 ))}
               </ul>
+              <p class="work-open">
+                Ver o site
+                <span class="sr-only"> (abre em outra aba)</span>
+              </p>
             </div>
-          </article>
+          </a>
         ))
       }
     </div>

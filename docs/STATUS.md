@@ -23,7 +23,8 @@ Snapshot deste repositório em 2026-10-27. Não descreve a infra Coolify.
 - Contato: WhatsApp `https://wa.me/5511968600272` em outra aba, e-mail `contato@mindthedigital.com.br`. Sem formulário.
 - Redes: LinkedIn, Instagram e Facebook, como no rodapé do WordPress.
 - Trabalhos: BASE Participações, RockTech e HVAC Engenharia, com link para o site no ar e miniatura em `public/work/`. A âncora é `#trabalhos`.
-- Mais seis sites fechados por segmento, miniaturas em `public/catalog/*.webp`. O texto trata cada um como site entregue. Sem URL `tpl-*`. A engenharia no cartão é Esquadro Engenharia, como no Directus de produção *(2026-10-27)*.
+- Mais seis sites fechados por segmento, miniaturas em `public/catalog/*.webp`, cada um com link para o endereço público (`leme`, `esquadro`, `navalha`, `hortensia`, `prumo`, `nacre` em `mindthedigital.com.br`). Sem URL `tpl-*`. A engenharia no cartão é Esquadro Engenharia *(2026-10-27)*.
+- O Hero da página inicial usa `public/hero.png`, o fundo de hexágonos do site WordPress, com uma camada preta por cima para o texto continuar legível.
 - `npm run build` verificado em 2026-10-27, com Astro 7.4.2: cinco páginas em `dist/`, sem entry de servidor.
 
 ## Fora deste site
@@ -32,5 +33,5 @@ Snapshot deste repositório em 2026-10-27. Não descreve a infra Coolify.
 - O homelab (`tpl-*.apps.mtd.net.br`) é desenvolvimento dos templates. A publicação para o visitante sai da VPS.
 - O índice está no ar em `https://templates.mindthedigital.com.br` (container `mtd-templates`, `SITE_KEY=templates`, Directus interno `directus-directus-1`). Verificado em 2026-10-27: `/`, `/contato`, `/metodo` e `/api/health` respondem 200, com `site` igual a `templates`.
 - O Traefik publica esse host com TLS padrão, sem pedir certificado novo. O token DNS do Traefik só enxerga `mtd.net.br` e `nodenode.net`. O certificado que o visitante vê é o da Cloudflare.
-- Os seis segmentos ainda não têm aplicativo nem DNS próprio nessa VPS. O índice ainda abre os cartões em `tpl-*.apps.mtd.net.br`. Este site institucional não liga esses cartões.
+- Os seis segmentos respondem em `https://leme.mindthedigital.com.br`, `esquadro`, `navalha`, `hortensia`, `prumo` e `nacre` (200 em 2026-10-27). Este site liga cada cartão a esse endereço.
 - cPanel não entra no caminho.
