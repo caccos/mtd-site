@@ -1,0 +1,95 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { missionPoints, values } from "../data/site";
+---
+
+<Base
+  title="Sobre · Mind The Digital"
+  description="A Mind The Digital cria sites e web apps com design, tecnologia e estratégia, para empresas, empreendedores e startups."
+>
+  <PageHero
+    eyebrow="Sobre"
+    title="Criamos experiências digitais que impulsionam negócios"
+    lede="Sites, aplicativos e automações com cara de estúdio e foco em resultado."
+  />
+
+  <section class="section">
+    <div class="wrap prose-grid">
+      <div>
+        <p class="eyebrow">Quem somos</p>
+        <h2>Agência de sites e web apps</h2>
+      </div>
+      <div class="prose">
+        <p>
+          A Mind The Digital é uma agência especializada em criação de sites e
+          desenvolvimento de web apps, combinando design moderno, tecnologia e
+          estratégias digitais.
+        </p>
+        <p>
+          Ajudamos empresas, empreendedores e startups a construir presença digital
+          sólida e profissional, com performance, usabilidade e conversão.
+        </p>
+        <p>
+          O compromisso é entregar soluções rápidas, escaláveis e personalizadas,
+          sempre focadas em resultado real para o negócio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="missao-titulo">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Nossa missão</p>
+        <h2 id="missao-titulo">Ajudar negócios a crescerem na era digital</h2>
+        <p class="section-lede">
+          Sites e aplicativos que convertem visitantes em clientes.
+        </p>
+      </header>
+      <div class="point-grid">
+        {
+          missionPoints.map((point) => (
+            <article>
+              <h3>{point.title}</h3>
+              <p>{point.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="valores-titulo">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Nossos valores</p>
+        <h2 id="valores-titulo">Como a gente trabalha</h2>
+      </header>
+      <div class="value-grid">
+        {
+          values.map((value) => (
+            <article>
+              <h3>{value.title}</h3>
+              <p>{value.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="wrap narrow">
+      <h2>Como podemos ajudar</h2>
+      <p class="section-lede">
+        Se você precisa de um site profissional, um web app intuitivo ou uma
+        plataforma digital eficiente, a gente monta a solução para o negócio. Os
+        temas em construção estão na <a href="/#temas">página inicial</a>.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>

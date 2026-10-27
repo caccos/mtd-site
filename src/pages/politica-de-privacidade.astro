@@ -1,0 +1,109 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title="Política de Privacidade · Mind The Digital"
+  description="Como a Mind The Digital trata dados neste site institucional estático: WhatsApp, e-mail, hospedagem e os seus direitos."
+>
+  <PageHero
+    eyebrow="Privacidade"
+    title="Política de Privacidade"
+    lede="Versão de 26 de outubro de 2026. Este texto descreve o site estático da Mind The Digital, sem cadastro, comentários ou formulário."
+  />
+
+  <article class="section">
+    <div class="wrap prose">
+      <h2>Quem somos</h2>
+      <p>
+        A Mind The Digital, CNPJ {site.cnpj}, com sede em {site.city}, é a
+        controladora dos dados tratados neste site. O contato é
+        <a href={`mailto:${site.email}`}>{site.email}</a> ou WhatsApp
+        <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
+          {site.phoneDisplay}<span class="sr-only"> (abre em outra aba)</span>
+        </a>.
+      </p>
+
+      <h2>O que este site faz com os seus dados</h2>
+      <p>
+        As páginas são publicadas como arquivos estáticos. Visitar o site não cria
+        conta, não abre um painel e não envia o conteúdo de um formulário para um
+        servidor nosso: esta versão não tem formulário, comentários nem área de login.
+      </p>
+      <p>
+        Não vendemos dados pessoais e não instalamos pixels de anúncio nesta versão.
+      </p>
+
+      <h2>WhatsApp e e-mail</h2>
+      <p>
+        O botão de WhatsApp deixa este site e abre uma conversa no
+        <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
+          WhatsApp<span class="sr-only"> (abre em outra aba)</span>
+        </a>. A partir daí, o número, o texto e a conversa são tratados pelo WhatsApp
+        (Meta), conforme a política daquele serviço. O mesmo vale se você nos
+        escrever por e-mail: lemos a mensagem para responder e guardar o histórico
+        ordinário do atendimento comercial.
+      </p>
+
+      <h2>Hospedagem</h2>
+      <p>
+        O site publicado é servido como arquivos estáticos. O provedor de hospedagem
+        pode registrar dados técnicos da conexão, como endereço IP, data, hora e
+        página pedida, para entregar o conteúdo e proteger o serviço. Nesta versão
+        não usamos esses registros para montar perfil de marketing.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        Este site não define cookies próprios de análise ou publicidade. Não há
+        sessão de visitante para lembrar. Se a hospedagem usar um cookie estritamente
+        necessário para segurança, ele não serve para identificar você em campanhas.
+      </p>
+
+      <h2>Redes sociais</h2>
+      <p>
+        Os links de LinkedIn, Instagram e Facebook saem deste site. Cada rede tem a
+        própria política e pode registrar a visita se você estiver autenticado por lá.
+      </p>
+      <ul>
+        {
+          site.social.map((item) => (
+            <li>
+              <a href={item.href} target="_blank" rel="noopener noreferrer">
+                {item.label}
+                <span class="sr-only"> (abre em outra aba)</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <h2>Por quanto tempo</h2>
+      <p>
+        Mensagens de e-mail e conversas de WhatsApp ficam pelo tempo necessário para
+        responder, cumprir obrigação legal e manter o registro do relacionamento
+        comercial. Logs técnicos da hospedagem seguem o prazo do provedor.
+      </p>
+
+      <h2>Os seus direitos</h2>
+      <p>
+        Nos termos da Lei Geral de Proteção de Dados, você pode pedir confirmação de
+        tratamento, acesso, correção, anonimização, eliminação, portabilidade e
+        informação sobre com quem os dados são compartilhados. Também pode revogar
+        um consentimento, quando o tratamento depender dele. Escreva para
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+      <p>
+        O site é institucional e não é dirigido a crianças.
+      </p>
+
+      <h2>Atualizações</h2>
+      <p>
+        Esta política pode mudar quando o site ganhar domínio público, formulário ou
+        ferramentas de medição. A data no topo da página acompanha a versão vigente.
+      </p>
+    </div>
+  </article>
+</Base>

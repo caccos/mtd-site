@@ -1,0 +1,58 @@
+---
+import { site } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-name">{site.name}</p>
+      <p class="footer-tag">
+        Criamos experiências digitais que impulsionam negócios. Sites e aplicativos
+        com estratégia, tecnologia e design.
+      </p>
+    </div>
+    <div>
+      <p class="footer-label">Páginas</p>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#temas">Temas</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-label">Contato</p>
+      <ul class="footer-links">
+        <li>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </li>
+        <li>{site.city}</li>
+        <li>
+          <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">
+            WhatsApp {site.phoneDisplay}
+            <span class="sr-only"> (abre em outra aba)</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="social">
+        {
+          site.social.map((item) => (
+            <li>
+              <a href={item.href} target="_blank" rel="noopener noreferrer">
+                {item.label}
+                <span class="sr-only"> (abre em outra aba)</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>© {year} {site.name}. Todos os direitos reservados.</p>
+    <p>CNPJ {site.cnpj}</p>
+  </div>
+</footer>

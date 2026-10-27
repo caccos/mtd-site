@@ -1,0 +1,53 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHero from "../components/PageHero.astro";
+import { site } from "../data/site";
+---
+
+<Base
+  title="Contato · Mind The Digital"
+  description="Fale com a Mind The Digital pelo WhatsApp (11) 96860-0272 ou pelo e-mail contato@mindthedigital.com.br. São Paulo, Brasil."
+>
+  <PageHero
+    eyebrow="Contato"
+    title="Vamos conversar sobre o projeto"
+    lede="O WhatsApp abre em outra aba e o e-mail abre no seu aplicativo. Nesta versão não há formulário nesta página."
+  />
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <article class="contact-card">
+        <p class="footer-label">WhatsApp</p>
+        <a
+          class="contact-main"
+          href={site.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {site.phoneDisplay}
+          <span class="sr-only"> (abre em outra aba)</span>
+        </a>
+        <p>A conversa abre no WhatsApp, em outra aba.</p>
+        <a
+          class="btn btn-rust"
+          href={site.whatsappHello}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Chamar no WhatsApp
+          <span class="sr-only"> (abre em outra aba)</span>
+        </a>
+      </article>
+      <article class="contact-card">
+        <p class="footer-label">E-mail</p>
+        <a class="contact-main" href={`mailto:${site.email}`}>{site.email}</a>
+        <p>Escreva direto para o estúdio. A mensagem não passa por um formulário deste site.</p>
+      </article>
+      <article class="contact-card">
+        <p class="footer-label">Onde estamos</p>
+        <p class="contact-main">{site.city}</p>
+        <p>CNPJ {site.cnpj}</p>
+      </article>
+    </div>
+  </section>
+</Base>

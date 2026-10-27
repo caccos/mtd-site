@@ -1,0 +1,48 @@
+---
+import { nav, site } from "../data/site";
+
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+
+function current(href: string) {
+  if (href === "/") return path === "/";
+  if (href.startsWith("/#")) return false;
+  return path === href;
+}
+---
+
+<header class="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="/">
+      <img src="/logo.png" width="46" height="46" alt="" />
+      <span>{site.name}</span>
+    </a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+    <label class="nav-burger" for="nav-toggle">
+      <span class="sr-only">Abrir menu</span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </label>
+    <nav class="site-nav" aria-label="Principal">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={current(item.href) ? "page" : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        class="nav-wa"
+        href={site.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+        <span class="sr-only"> (abre em outra aba)</span>
+      </a>
+    </nav>
+  </div>
+</header>

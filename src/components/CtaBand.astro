@@ -1,0 +1,26 @@
+---
+import { site } from "../data/site";
+---
+
+<section class="cta-band" aria-labelledby="cta-titulo">
+  <div class="wrap cta-inner">
+    <p class="eyebrow">Próximo passo</p>
+    <h2 id="cta-titulo">Transforme sua presença digital agora mesmo</h2>
+    <p>
+      Chegou a hora de ter um site ou aplicativo que realmente impulsiona o negócio.
+      Fale com a gente e veja como podemos ajudar.
+    </p>
+    <div class="actions">
+      <a class="btn btn-rust" href="/contato">Solicite um orçamento</a>
+      <a
+        class="btn btn-ghost"
+        href={site.whatsappHello}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Fale com um especialista
+        <span class="sr-only"> (abre em outra aba)</span>
+      </a>
+    </div>
+  </div>
+</section>

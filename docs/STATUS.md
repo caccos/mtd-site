@@ -1,0 +1,28 @@
+# STATUS — mtd-site
+
+Snapshot deste repositório em 2026-10-26. Não descreve a infra Coolify.
+
+## Snapshot atual
+
+- **Pasta:** `~/dev/sites/mtd-site`
+- **O que é:** site institucional da Mind The Digital (Home, Sobre, Contato, Política de Privacidade) mais a vitrine dos seis temas.
+- **Stack:** Astro 5 estático (`output: "static"`). `npm run build` gera `dist/` com HTML, CSS, fontes e imagens. Sem adapter e sem servidor.
+- **Hospedagem prevista:** Vercel, plano Hobby. Nada foi enviado para a Vercel. Upgrade para o Pro, quando o site for público, fica com o operador.
+- **Git:** ainda sem `git init` e sem remoto. Orientação no [`README.md`](../README.md).
+- **Node local:** a máquina de dev não tinha Node no PATH. Há um binário oficial 22.23.4 em `~/.local/node`, com atalhos em `~/.local/bin`.
+
+## O que está funcionando
+
+- Páginas `/`, `/sobre`, `/contato`, `/politica-de-privacidade` e `404`.
+- Serviços: sites, aplicativos, automação e integrações. Depoimentos e chamado para o próximo passo, a partir da cópia WordPress em `mtd-wp` (`http://172.16.40.20:8081/`). O tema Kadence/Elementor não foi copiado.
+- A política de privacidade foi reescrita para este site estático. A página do WordPress era o texto padrão de comentários, login e Gravatar, que aqui não existem.
+- Contato: WhatsApp `https://wa.me/5511968600272` em outra aba, e-mail `contato@mindthedigital.com.br`. Sem formulário.
+- Redes: LinkedIn, Instagram e Facebook, como no rodapé do WordPress.
+- Catálogo: seis temas, textos de `mtd-site-starter/src/lib/catalog.ts`, miniaturas em `public/catalog/*.webp`. Cartão mostra marca, título, resumo e módulos, com selo **Prévia**. Sem URL `tpl-*`.
+- `npm run build` verificado em 2026-10-26: cinco páginas em `dist/`, sem entry de servidor.
+
+## Fora deste site
+
+- Directus de produção permanece em `https://dir.nodenode.net` (VPS). Este build não o consulta.
+- Demos `tpl-*` continuam no lab `mtd-site-starter`. Não foram publicadas daqui.
+- cPanel não entra no caminho.

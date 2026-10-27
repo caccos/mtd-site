@@ -1,0 +1,99 @@
+---
+import Base from "../layouts/Base.astro";
+import CatalogGrid from "../components/CatalogGrid.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { services, site, testimonials } from "../data/site";
+---
+
+<Base
+  title="Mind The Digital — Sites e aplicativos"
+  description="Desenvolvimento de sites e aplicações digitais, aplicativos, automação e integrações. Estúdio digital em São Paulo."
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Estúdio digital · São Paulo</p>
+        <h1>Transformamos ideias em <em>sites e aplicativos</em></h1>
+        <p class="lede">
+          Desenvolvimento de sites e aplicações digitais de acordo com as suas necessidades.
+        </p>
+        <div class="actions">
+          <a class="btn btn-rust" href="/contato">Solicite um orçamento</a>
+          <a
+            class="btn btn-ghost"
+            href={site.whatsappHello}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Fale com um especialista
+            <span class="sr-only"> (abre em outra aba)</span>
+          </a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Serviços">
+        <p class="hero-panel-kicker">No mesmo projeto</p>
+        <ol>
+          <li><a href="#servicos"><span>01</span> Sites</a></li>
+          <li><a href="#servicos"><span>02</span> Aplicativos</a></li>
+          <li><a href="#servicos"><span>03</span> Automação e integrações</a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="servicos" aria-labelledby="servicos-titulo">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Nossos serviços</p>
+        <h2 id="servicos-titulo">Soluções digitais sob medida</h2>
+        <p class="section-lede">
+          Criamos experiências digitais para transformar a presença online. Design,
+          tecnologia e estratégia no mesmo trabalho.
+        </p>
+      </header>
+      <div class="service-list">
+        {
+          services.map((service) => (
+            <article>
+              <p class="service-num">{service.number}</p>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CatalogGrid />
+
+  <section class="section" aria-labelledby="depoimentos-titulo">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow">Clientes</p>
+        <h2 id="depoimentos-titulo">O que nossos clientes dizem</h2>
+        <p class="section-lede">
+          Construímos experiências que geram resultados. A confiança de quem contrata
+          é o nosso maior ativo.
+        </p>
+      </header>
+      <div class="quotes">
+        {
+          testimonials.map((item) => (
+            <figure>
+              <blockquote>
+                <p>{item.quote}</p>
+              </blockquote>
+              <figcaption>
+                <span>{item.name}</span>
+                {item.role}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
